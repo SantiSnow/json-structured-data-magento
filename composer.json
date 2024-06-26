@@ -1,0 +1,22 @@
+{
+    "name": "osaka/module-structureddata",
+    "description": "Module created to generate structured data in the product page",
+    "type": "magento2-module",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Mage2Gen",
+            "email": "info@mage2gen.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Osaka\\StructuredData\\": ""
+        }
+    }
+}

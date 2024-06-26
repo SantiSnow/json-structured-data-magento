@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="product.info.main">
+            <block class="Osaka\StructuredData\Block\Product"
+                   name="product.info.product"
+                   template="Osaka_StructuredData::custom_tab.phtml"
+                   after="product.info.overview" />
+        </referenceBlock>
+        <referenceBlock name="head.additional">
+            <block class="Osaka\StructuredData\Block\Product"
+                   name="product.info.product"
+                   template="Osaka_StructuredData::custom_tab.phtml"
+                   after="product.info.overview" />
+        </referenceBlock>
+    </body>
+</page>
