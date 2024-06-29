@@ -9,6 +9,8 @@
  - [Attributes](#markdown-header-attributes)
 
 
+    composer require osaka/module-structureddata
+
 ## Main Functionalities
 Module created to generate structured data in the product page
 
