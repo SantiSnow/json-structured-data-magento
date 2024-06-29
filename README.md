@@ -42,14 +42,8 @@ Module created to generate structured data in the product page
 
 ## Specifications
 
- - API Endpoint
-	- GET - Osaka\StructuredData\Api\ProductManagementInterface > Osaka\StructuredData\Model\ProductManagement
-
  - Block
 	- Product > product.phtml
-
- - Block
-	- AdminProduct > adminproduct.phtml
 
 
 ## Attributes
