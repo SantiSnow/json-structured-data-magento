@@ -15,7 +15,7 @@ class ProductManagement implements \Osaka\StructuredData\Api\ProductManagementIn
      */
     public function getProduct($param)
     {
-        return 'hello api GET return the $param ' . $param;
+
     }
 }
 

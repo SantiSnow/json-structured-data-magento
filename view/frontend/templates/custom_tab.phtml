@@ -9,5 +9,5 @@
 
 $currentProduct = $block->getProduct();
 echo '<script type="application/ld+json">';
-print_r($block->getStructuredJsonData());
+echo $block->getStructuredJsonDataAsArray();
 echo '</script>';
