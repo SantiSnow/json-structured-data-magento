@@ -20,27 +20,6 @@ class Product extends View
 
         $shortDescription = trim(preg_replace('/ +/', ' ', preg_replace('/[^A-Za-z0-9 ]/', ' ', urldecode(html_entity_decode(strip_tags($productBasicInformation['short_description']))))));
 
-        $structuredData = "{";
-        $structuredData .= '"@context": "https://schema.org/",' . "\n\r";
-        $structuredData .= '"@type": "Product",' . PHP_EOL;
-        $structuredData .= '"name": "'.$productBasicInformation->getName().'",' . "\n\r";
-        $structuredData .= '"sku": "'.$productBasicInformation->getSku().'",' . "\n\r";
-        $structuredData .= '"description": "'.$shortDescription.'",' . "\n\r";
-        $structuredData .= '"image": ["'.$productBasicInformation->getMediaConfig()->getMediaUrl($productBasicInformation->getImage()).'"]' . "\n\r";
-        $structuredData .= "}";
-
-        return $structuredData;
-    }
-
-    /**
-     * @return string
-     */
-    public function getStructuredJsonDataAsArray(): string
-    {
-        $productBasicInformation = $this->getProduct();
-
-        $shortDescription = trim(preg_replace('/ +/', ' ', preg_replace('/[^A-Za-z0-9 ]/', ' ', urldecode(html_entity_decode(strip_tags($productBasicInformation['short_description']))))));
-
         $structuredData = [];
         $structuredData["@context"]= "https://schema.org/";
         $structuredData["@type"]= 'Product';
@@ -51,4 +30,5 @@ class Product extends View
 
         return json_encode($structuredData);
     }
+
 }
