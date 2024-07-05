@@ -17,6 +17,11 @@ Module created to generate structured data in the product page
 ## Installation
 \* = in production please use the `--keep-generated` option
 
+### Requirements
+
+- Requires PHP soap extension. To install it run `sudo apt-get install php-soap`
+  and `sudo systemctl restart apache2` or `sudo service apache2 restart`
+
 ### Type 1: Zip file
 
  - Unzip the zip file in `app/code/Osaka`
