@@ -28,7 +28,7 @@ class Product extends View
         $structuredData["description"] = $shortDescription;
         $structuredData["image"] = array($productBasicInformation->getMediaConfig()->getMediaUrl($productBasicInformation->getImage()));
 
-        return json_encode($structuredData);
+        return json_encode($structuredData, JSON_UNESCAPED_SLASHES);
     }
 
 }
