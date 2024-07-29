@@ -1,13 +1,6 @@
-# Module StructuredData for Magento 2
+# Mage2 Module Osaka StructuredData
 
-    ``osaka/module-structureddata``
-
- - [Main Functionalities](#markdown-header-main-functionalities)
- - [Installation](#markdown-header-installation)
- - [Configuration](#markdown-header-configuration)
- - [Specifications](#markdown-header-specifications)
- - [Attributes](#markdown-header-attributes)
-
+A simple module for Magento 2, version 2.4.x, that will help you add structured data to your product pages. The plugin does not add any configuration to your ecommerce dashboard, and it does not require any customization from your side. 
 
     composer require osaka/module-structureddata
 
@@ -31,12 +24,8 @@ Module created to generate structured data in the product page
 
 ### Type 2: Composer
 
- - Make the module available in a composer repository for example:
-    - private repository `repo.magento.com`
-    - public repository `packagist.org`
-    - public github repository as vcs
- - Add the composer repository to the configuration by running `composer config repositories.repo.magento.com composer https://repo.magento.com/`
- - Install the module composer by running `composer require osaka/module-structureddata`
+ - Check your PHP and apache/nginx dependencies and update them if necessary.
+ - Install the module with composer by running `composer require osaka/module-structureddata`
  - enable the module by running `php bin/magento module:enable Osaka_StructuredData`
  - apply database updates by running `php bin/magento setup:upgrade`\*
  - Flush the cache by running `php bin/magento cache:flush`
@@ -44,16 +33,18 @@ Module created to generate structured data in the product page
 
 ## Configuration
 
-
-
-
-## Specifications
-
- - Block
-	- Product > product.phtml
-
+Configuration is not necessary.
 
 ## Attributes
 
+An example of the attributes:
 
+      {
+         "@context":"https://schema.org/","@type":"Product",
+         "name":"product one",
+         "sku":"fo83hqfehdfhi3h3",
+         "description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+         "image":
+            ["http://local.magento.co/media/catalog/product/example.jpg"]
+      }
 
