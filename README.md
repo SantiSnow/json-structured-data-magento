@@ -1,4 +1,4 @@
-# Mage2 Module Osaka StructuredData
+# Module StructuredData for Magento 2
 
     ``osaka/module-structureddata``
 
